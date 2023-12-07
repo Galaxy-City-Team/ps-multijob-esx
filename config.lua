@@ -1,15 +1,28 @@
 Config = Config or {}
 
 -- Side of the screen where you want the ui to be on. Can either be "left" or "right"
-Config.Side = "right"
+Config.Side = "left"
 
-Config.MaxJobs = 3
+Config.MaxJobs = 5
 Config.IgnoredJobs = {
+	["unemployed"] = true,
+	["galaxycity"] = true,
+	["off_galaxycity"] = true,
+	["unemployed"] = true,
 	["unemployed"] = true,
 }
 
 Config.DenyDuty = {
 	["ambulance"] = true,
+	["police"] = true,
+	["police"] = true,
+	["police"] = true,
+	["police"] = true,
+	["police"] = true,
+	["police"] = true,
+	["police"] = true,
+	["police"] = true,
+	["police"] = true,
 	["police"] = true,
 }
 
@@ -22,11 +35,11 @@ Config.WhitelistJobs = {
 }
 
 Config.Descriptions = {
-	["police"] = "Shoot some criminals or maybe be a good cop and arrest them",
-	["ambulance"] = "Fix the bullet holes",
-	["mechanic"] = "Fix the bullet holes",
-	["tow"] = "Pickup the tow truck and steal some vehicles",
-	["taxi"] = "Pickup people around the city and drive them to their destination",
+	["police"] = "Sorge auf Galaxy City für Recht und Ordnung!",
+	["ambulance"] = "Hilf dem Staat Galaxy City und unterstütze uns als Mediziner!",
+	["mechanic"] = "Dein Auto ist liegen geblieben? Kein problem! Das LSC hilft dir!",
+	["firefighter"] = "Befreie den Staat Galaxy City von Bränden!",
+	["taxi"] = "Als Taxifahrer lernst du jede Ecke von Galaxy City ganz genau kennen",
 	["bus"] = "Pickup multiple people around the city and drive them to their destination",
 	["realestate"] = "Sell houses or something",
 	["cardealer"] = "Sell cars or something",
@@ -44,8 +57,10 @@ Config.Descriptions = {
 Config.FontAwesomeIcons = {
 	["police"] = "fa-solid fa-handcuffs",
 	["ambulance"] = "fa-solid fa-user-doctor",
+	["off_police"] = "fa-solid fa-handcuffs",
+	["off_ambulance"] = "fa-solid fa-user-doctor",
 	["mechanic"] = "fa-solid fa-wrench",
-	["tow"] = "fa-solid fa-truck-tow",
+	["off_mechanic"] = "fa-solid fa-truck-tow",
 	["taxi"] = "fa-solid fa-taxi",
 	["bus"] = "fa-solid fa-bus",
 	["realestate"] = "fa-solid fa-sign-hanging",
@@ -56,5 +71,5 @@ Config.FontAwesomeIcons = {
 	["trucker"] = "fa-solid fa-truck-front",
 	["garbage"] = "fa-solid fa-trash-can",
 	["vineyard"] = "fa-solid fa-wine-bottle",
-	["hotdog"] = "fa-solid fa-hotdog",
+	["staat"] = "fa-solid fa-city",
 }
