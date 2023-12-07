@@ -21,11 +21,11 @@
 	export let category: string;
 
 	function getDutyText(onDuty: boolean) {
-		return onDuty ? "On Duty" : "Off Duty";
+		return onDuty ? "Im Dienst" : "Ausser Dienst";
 	}
 
 	function getSelectText(select: boolean) {
-		return select ? "Selected" : "Unselect";
+		return select ? "Ausgewählt" : "Nicht Ausgewählt";
 	}
 
 	const { activeJob, onDuty, setActiveJob, toggleDuty, unSetActiveJob, deleteJob } = JobStore;
@@ -105,9 +105,9 @@
 		{description}
 	</p>
 	<div class="job-details flex gap-[12px] justify-stretch">
-		<JobDetail icon={SalarySVG} detail="Salary" value={salary} svgSize="w-[0.8rem]"/>
-		<JobDetail icon={RankSVG}   detail="Rank"   value={rank} svgSize="w-[1.4rem]"/>
-		<JobDetail icon={ActiveSVG} detail="Active" value={active} svgSize="w-[1.1rem]"/>
+		<JobDetail icon={SalarySVG} detail="Gehalt" value={salary} svgSize="w-[0.8rem]"/>
+		<JobDetail icon={RankSVG}   detail="Rang"   value={rank} svgSize="w-[1.4rem]"/>
+		<JobDetail icon={ActiveSVG} detail="Aktiv" value={active} svgSize="w-[1.1rem]"/>
 	</div>
 	<div class="mt-2">
 		{#if !isActive}
