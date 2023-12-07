@@ -24,11 +24,16 @@ RegisterNUICallback('selectjob', function(data, cb)
     TriggerServerEvent("ps-multijob:changeJob", data["name"], data["grade"])
     local onDuty = false
         -- Need to do ESX job 
+        TriggerEvent("jobs_creator:toggleCurrentDutyStatus", false)
     cb({onDuty = onDuty})
 end)
 
 RegisterNUICallback('closemenu', function(data, cb)
     cb({})
+    SetNuiFocus(false,false)
+end)
+
+AddEventHandler('gc:close:all', function()
     SetNuiFocus(false,false)
 end)
 
@@ -42,6 +47,7 @@ end)
 RegisterNUICallback('toggleduty', function(data, cb)
     cb({})
         -- Need to do ESX job onduty
+        TriggerEvent("jobs_creator:toggleCurrentDutyStatus")
 end)
 
 RegisterNetEvent('esx:setJob', function(newJob)
@@ -59,6 +65,6 @@ end)
 
 RegisterCommand("jobmenu", OpenUI)
 
-RegisterKeyMapping('jobmenu', "Show Job Management", "keyboard", "J")
+RegisterKeyMapping('jobmenu', "Arbeitsmenu öffnen", "keyboard", "J")
 
 TriggerEvent('chat:removeSuggestion', '/jobmenu')
